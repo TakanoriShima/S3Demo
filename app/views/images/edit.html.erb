@@ -1,0 +1,18 @@
+<h1>Image編集</h1>
+<%= form_for(@image) do |f| %>
+  <p>
+      <%= f.label :name,  '名前' %>
+      <%= f.text_field :name, value: @image.name %>
+  </p>
+  <p>
+      <%= image_tag @image.image.url %>
+  </p>
+  <p>
+      <%= f.label :image, '画像ファイル' %>
+      <%= f.file_field :image  %>
+  </p>
+  
+  <p><%= f.submit '更新' %></p>
+<% end %>
+<p><%= link_to '戻る', image_path %></p>
+

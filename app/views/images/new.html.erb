@@ -1,0 +1,12 @@
+<h1>Image作成</h1>
+<%= form_for(@image) do |f| %>
+  <p>
+    <%= f.label :name, '名前' %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :image, '画像ファイル' %>
+    <%= f.file_field :image %>
+  </p>
+  <p><%= f.submit '画像登録' %></p>
+<% end %>
